@@ -1,52 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:pushapp_can/services/push_notifications_service.dart';
-
-import 'package:pushapp_can/screens/home_screen.dart';
-import 'package:pushapp_can/screens/message_screen.dart';
+import 'package:notification_angelnahuat/pages/homepage.dart';
+import 'package:notification_angelnahuat/pages/mensajepage.dart';
+import 'package:notification_angelnahuat/services/push_not_serv.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await PushNotificationService.initializeApp();
+  await PushNotService.initializeApp();
 
   runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  final GlobalKey<NavigatorState> navigatorKey =
-      new GlobalKey<NavigatorState>();
-  final GlobalKey<ScaffoldMessengerState> messengerKey =
-      new GlobalKey<ScaffoldMessengerState>();
-
+  final GlobalKey<NavigatorState> navkey = GlobalKey<NavigatorState>();
   @override
   void initState() {
     super.initState();
 
-    // Context!
-    PushNotificationService.messagesStream.listen((message) {
-      // print('MyApp: $message');
-      navigatorKey.currentState?.pushNamed('message', arguments: message);
-
-      final snackBar = SnackBar(content: Text(message));
-      messengerKey.currentState?.showSnackBar(snackBar);
+    PushNotService.messagesStream.listen((data) {
+      print('MyApp: $data');
+      navkey.currentState?.pushNamed('mensaje', arguments: data);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Material App',
+      navigatorKey: navkey,
       initialRoute: 'home',
-      navigatorKey: navigatorKey, // Navegar
-      scaffoldMessengerKey: messengerKey, // Snacks
+      debugShowCheckedModeBanner: false,
       routes: {
-        'home': (_) => HomeScreen(),
-        'message': (_) => MessageScreen(),
+        'home': (BuildContext c) => HomePage(),
+        'mensaje': (BuildContext c) => MensajePage()
       },
     );
   }

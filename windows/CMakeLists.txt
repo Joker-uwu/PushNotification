@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(pushapp_can LANGUAGES CXX)
+project(notification_angelnahuat LANGUAGES CXX)
 
-set(BINARY_NAME "pushapp_can")
+set(BINARY_NAME "notification_angelnahuat")
 
 cmake_policy(SET CMP0063 NEW)
 
