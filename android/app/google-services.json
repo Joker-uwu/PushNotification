@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "118430292862",
+    "project_id": "push-notification-40df0",
+    "storage_bucket": "push-notification-40df0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118430292862:android:1b4c39433e5971257bb12f",
+        "android_client_info": {
+          "package_name": "com.Eydher.NotofiPush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118430292862-2t1olpp93aog021t7dbbv4imsk4d4002.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdM2TZvNtKivqxJeVHUoIrNYifzxsBi-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118430292862-2t1olpp93aog021t7dbbv4imsk4d4002.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
