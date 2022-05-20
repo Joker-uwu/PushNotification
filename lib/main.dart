@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:notification_angelnahuat/pages/homepage.dart';
-import 'package:notification_angelnahuat/pages/mensajepage.dart';
-import 'package:notification_angelnahuat/services/push_not_serv.dart';
+import 'package:notification_Eydher/pages/homepage.dart';
+import 'package:notification_Eydher/pages/mensajepage.dart';
+import 'package:notification_Eydher/services/push_not_serv.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

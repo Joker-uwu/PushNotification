@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(notification_angelnahuat LANGUAGES CXX)
+project(notification_Eydher LANGUAGES CXX)
 
-set(BINARY_NAME "notification_angelnahuat")
+set(BINARY_NAME "notification_Eydher")
 
 cmake_policy(SET CMP0063 NEW)
 
